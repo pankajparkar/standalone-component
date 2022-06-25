@@ -1,7 +1,7 @@
-import { DatabaseService } from './../../service/database.service';
-import { Component, OnInit, Input, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
+import { DatabaseService } from '../../../service/database.service';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'bmc-movies-grid',

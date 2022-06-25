@@ -18,7 +18,6 @@ import { PipesModule } from './pipes/pipes.module'
 
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { MovieSearchComponent } from './components/movie-search/movie-search.component';
-import { MoviesGridComponent } from './components/movies-grid/movies-grid.component';
 import { MoviesSliderComponent } from './components/movies-slider/movies-slider.component';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -34,6 +33,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { VerticalBarChartComponent } from './shared/components/charts/vertical-bar-chart/vertical-bar-chart.component';
 import { NumberChartComponent } from './shared/components/charts/number-chart/number-chart.component';
 import { GoldenTextComponent } from './shared/components/golden-text/golden-text.component';
+import { MoviesGridComponent } from './shared/components/movies-grid/movies-grid.component';
 
 @NgModule({
   declarations: [
