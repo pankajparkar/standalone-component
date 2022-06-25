@@ -1,8 +1,8 @@
-import { InMemoryDataService } from './service/in-memory-data.service';
+import { InMemoryDataService } from './services/in-memory-data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { DatabaseService } from './service/database.service';
+import { DatabaseService } from './services/database.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';

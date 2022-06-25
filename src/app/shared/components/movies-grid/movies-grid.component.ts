@@ -1,4 +1,4 @@
-import { DatabaseService } from '../../../service/database.service';
+import { DatabaseService } from '../../../services/database.service';
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BsModalService } from 'ngx-bootstrap/modal';
