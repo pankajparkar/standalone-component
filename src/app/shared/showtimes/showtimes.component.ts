@@ -2,9 +2,12 @@ import { Component, OnInit, Input, SimpleChanges, OnChanges, ChangeDetectionStra
 import { Movie } from '../../models/movie';
 import { DatabaseService } from '../../services/database.service';
 import { ShowtimeDate } from 'src/app/models/showtime-date';
+import { DayPipe } from 'src/app/pipes/day.pipe';
 
 @Component({
+  standalone: true,
   selector: 'bmc-showtimes',
+  imports: [DayPipe],
   templateUrl: './showtimes.component.html',
   styleUrls: ['./showtimes.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,

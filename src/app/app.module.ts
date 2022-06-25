@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { HomeComponent } from './components/home/home.component';
 
-import { PipesModule } from './pipes/pipes.module'
+import { pipes, PipesModule } from './pipes/pipes.module'
 
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { MoviesSliderComponent } from './components/movies-slider/movies-slider.component';
@@ -51,13 +52,13 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     ModalModule.forRoot(),
     HttpClientModule,
-    PipesModule,
+    ...pipes,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
     CarouselModule.forRoot(),
     SharedModule,
-    PipesModule,
+    BrowserAnimationsModule,
   ],
   providers: [DatabaseService],
   bootstrap: [AppComponent],

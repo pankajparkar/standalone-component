@@ -12,10 +12,11 @@ import { GoldenTextComponent } from './golden-text/golden-text.component';
 import { MoviesGridComponent } from './movies-grid/movies-grid.component';
 import { MoviePreviewCardComponent } from './movie-preview-card/movie-preview-card.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
-import { PipesModule } from '../pipes/pipes.module';
+import { pipes, PipesModule } from '../pipes/pipes.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const components = [
-    ShowtimesComponent,
+    // ShowtimesComponent,
     NavbarComponent,
     FooterComponent,
     VerticalBarChartComponent,
@@ -31,13 +32,16 @@ const components = [
         ...components,
     ],
     imports: [
+        ShowtimesComponent,
         CommonModule,
         NgxChartsModule,
         RouterModule,
-        PipesModule,
+        ...pipes,
+        BrowserAnimationsModule,
     ],
     exports: [
         ...components,
+        ShowtimesComponent,
     ]
 })
 export class SharedModule { }
