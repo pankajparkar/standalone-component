@@ -17,23 +17,21 @@ import { HomeComponent } from './components/home/home.component';
 import { PipesModule } from './pipes/pipes.module'
 
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
-import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 import { MoviesSliderComponent } from './components/movies-slider/movies-slider.component';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { ManageShowtimesComponent } from './components/manage-showtimes/manage-showtimes.component';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MovieDetailsCardComponent } from './components/movie-details-card/movie-details-card.component';
-import { MoviePreviewCardComponent } from './components/movie-preview-card/movie-preview-card.component';
+import { SharedModule } from './shared/shared.module';
 
-import { ShowtimesComponent } from './shared/showtimes/showtimes.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { VerticalBarChartComponent } from './shared/charts/vertical-bar-chart/vertical-bar-chart.component';
-import { NumberChartComponent } from './shared/charts/number-chart/number-chart.component';
-import { GoldenTextComponent } from './shared/golden-text/golden-text.component';
-import { MoviesGridComponent } from './shared/movies-grid/movies-grid.component';
+// import { ShowtimesComponent } from './shared/showtimes/showtimes.component';
+// import { NavbarComponent } from './shared/navbar/navbar.component';
+// import { FooterComponent } from './shared/footer/footer.component';
+// import { VerticalBarChartComponent } from './shared/charts/vertical-bar-chart/vertical-bar-chart.component';
+// import { NumberChartComponent } from './shared/charts/number-chart/number-chart.component';
+// import { GoldenTextComponent } from './shared/golden-text/golden-text.component';
+// import { MoviesGridComponent } from './shared/movies-grid/movies-grid.component';
 
 @NgModule({
   declarations: [
@@ -41,21 +39,12 @@ import { MoviesGridComponent } from './shared/movies-grid/movies-grid.component'
     MoviesComponent,
     MovieDetailComponent,
     HomeComponent,
-    ShowtimesComponent,
     MoviesListComponent,
-    MovieSearchComponent,
-    MoviesGridComponent,
     MoviesSliderComponent,
-    NavbarComponent,
-    FooterComponent,
     DashboardComponent,
     CollectionComponent,
     ManageShowtimesComponent,
-    VerticalBarChartComponent,
-    NumberChartComponent,
     MovieDetailsCardComponent,
-    GoldenTextComponent,
-    MoviePreviewCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +56,8 @@ import { MoviesGridComponent } from './shared/movies-grid/movies-grid.component'
       InMemoryDataService, { dataEncapsulation: false }
     ),
     CarouselModule.forRoot(),
-    NgxChartsModule,
+    SharedModule,
+    PipesModule,
   ],
   providers: [DatabaseService],
   bootstrap: [AppComponent],
