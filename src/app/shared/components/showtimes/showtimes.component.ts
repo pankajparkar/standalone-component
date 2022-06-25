@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { Movie } from '../../models/movie';
-import { DatabaseService } from '../../service/database.service';
+import { Movie } from '../../../models/movie';
+import { DatabaseService } from '../../../service/database.service';
 import { ShowtimeDate } from 'src/app/models/showtime-date';
 
 @Component({
